@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundsignup"
+    android:gravity="center">
+    <com.devspark.robototextview.widget.RobotoTextView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="#FFF"
+        android:text="SIGN UP"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:typeface="roboto_bold"/>
+    <EditText
+        android:layout_width="fill_parent"
+        android:drawableLeft="@drawable/user"
+        android:drawablePadding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="40dp"
+        android:hint="Please insert your name"
+        android:layout_marginTop="10dp"
+        android:id="@+id/name"
+        android:textColorHint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:inputType="text"
+        android:background="@drawable/roundededittext"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/email"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#FFFFFF"
+        android:hint="Please insert your email"
+        android:id="@+id/email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#FFFFFF"
+        android:background="@drawable/roundededittext"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="50dp"
+        android:textSize="20sp"
+        android:id="@+id/submit"
+        android:background="@drawable/roundedbutton"
+        android:textColor="#FFFFFF"
+        android:text="Submit"/>
+</LinearLayout>
