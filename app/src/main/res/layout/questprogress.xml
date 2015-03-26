@@ -18,20 +18,16 @@
         android:max="100"
         android:id="@+id/progressCircle"
         android:layout_gravity="center"/>
-    <TextView
+    <com.devspark.robototextview.widget.RobotoTextView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/percent"
+        android:textSize="80sp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:id="@+id/percent"
         android:textColor="#61bcf9"
-        android:textSize="40sp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/percent"
-        android:id="@+id/completenumber"
-        android:textColor="#61bcf9"
-        android:textSize="40sp"/>
+        app:typeface="roboto_bold"
+    />
+
 </RelativeLayout>

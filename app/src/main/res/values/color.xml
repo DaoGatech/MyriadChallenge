@@ -3,5 +3,5 @@
     <color name="ColorPrimary">#FF5722</color>
     <color name="ColorPrimaryDark">#E64A19</color>
     <color name="complete">#339900</color>
-    <color name="incomplete">#A00000 </color>
+    <color name="incomplete">#A00000</color>
 </resources>

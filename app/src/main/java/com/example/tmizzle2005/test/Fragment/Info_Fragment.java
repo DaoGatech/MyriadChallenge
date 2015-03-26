@@ -125,13 +125,13 @@ public class Info_Fragment extends Fragment {
                         isComplete.setImageResource(R.drawable.complete);
                         isCom.setText("Complete");
                         editor.putInt(getArguments().getString("belong")+ prefs.getString("storedEmail","") + new SignUp().getDifferKey(),prefs.getInt(getArguments().getString("belong")+  prefs.getString("storedEmail","") + new SignUp().getDifferKey(),0) - 1).apply();
-                        editor.putInt("totalQuestComplete"+ prefs.getString("storedEmail","") + new SignUp().getDifferKey(),prefs.getInt("totalQuestComplete"+  prefs.getString("storedEmail","") + new SignUp().getDifferKey(),0) - 1).apply();
+                        editor.putInt("KingdomFinished"+ prefs.getString("storedEmail","") + new SignUp().getDifferKey(),prefs.getInt("KingdomFinished"+  prefs.getString("storedEmail","") + new SignUp().getDifferKey(),0) - 1).apply();
                     } else {
                         editor.putString(getArguments().getString("name")+ prefs.getString("storedEmail","") + new SignUp().getDifferKey(), "incomplete").apply();
                         isComplete.setImageResource(R.drawable.incomplete);
                         isCom.setText("Incomplete");
                         editor.putInt(getArguments().getString("belong")+ prefs.getString("storedEmail","") + new SignUp().getDifferKey(),prefs.getInt(getArguments().getString("belong")+ prefs.getString("storedEmail","") + new SignUp().getDifferKey(),0) + 1).apply();
-                        editor.putInt("totalQuestComplete"+ prefs.getString("storedEmail","") + new SignUp().getDifferKey(),prefs.getInt("totalQuestComplete"+  prefs.getString("storedEmail","") + new SignUp().getDifferKey(),0) + 1).apply();
+                        editor.putInt("KingdomFinished"+ prefs.getString("storedEmail","") + new SignUp().getDifferKey(),prefs.getInt("KingdomFinished"+  prefs.getString("storedEmail","") + new SignUp().getDifferKey(),0) + 1).apply();
                     }
                 }
             });

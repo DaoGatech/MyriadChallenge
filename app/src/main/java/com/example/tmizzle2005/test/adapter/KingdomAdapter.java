@@ -59,11 +59,6 @@ public class KingdomAdapter extends RecyclerView.Adapter<KingdomAdapter.ViewHold
                 .load(itemsData.get(position).getImage())
                 .into(viewHolder.imgViewIcon);
         viewHolder.questComplete.setText("Completed: " + (qsize-remain) + "/" + qsize);
-        if(remain == 0) {
-            SharedPreferences.Editor editor = prefs.edit();
-            editor.putInt("KingdomFinished" + prefs.getString("storedEmail","") + new SignUp().getDifferKey(),
-                    prefs.getInt("KingdomFinished" +  prefs.getString("storedEmail","") + new SignUp().getDifferKey(),0) - 1).apply();
-        }
 
     }
 
