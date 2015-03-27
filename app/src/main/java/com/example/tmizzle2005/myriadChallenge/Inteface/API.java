@@ -1,13 +1,13 @@
-package com.example.tmizzle2005.test.Inteface;
+package com.example.tmizzle2005.myriadChallenge.Inteface;
 
 /**
  * Created by tmizzle2005 on 3/15/15.
  * the main API Interface of the app
  */
 
-import com.example.tmizzle2005.test.Model.KdInfo;
-import com.example.tmizzle2005.test.Model.KingdomItem;
-import com.example.tmizzle2005.test.Model.SignUpMessage;
+import com.example.tmizzle2005.myriadChallenge.Model.KdInfo;
+import com.example.tmizzle2005.myriadChallenge.Model.KingdomItem;
+import com.example.tmizzle2005.myriadChallenge.Model.SignUpMessage;
 
 import java.util.ArrayList;
 import retrofit.Callback;

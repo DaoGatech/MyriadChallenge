@@ -1,4 +1,4 @@
-package com.example.tmizzle2005.test.Fragment;
+package com.example.tmizzle2005.myriadChallenge.Fragment;
 
 /**
  * Created by tmizzle2005 on 3/19/15.
@@ -20,12 +20,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 import com.devspark.robototextview.widget.RobotoTextView;
-import com.example.tmizzle2005.test.Model.KdInfo;
-import com.example.tmizzle2005.test.Model.Quest;
-import com.example.tmizzle2005.test.R;
-import com.example.tmizzle2005.test.activity.KingdomInfo;
-import com.example.tmizzle2005.test.activity.Nicer_Quest;
-import com.example.tmizzle2005.test.activity.SignUp;
+import com.example.tmizzle2005.myriadChallenge.Model.KdInfo;
+import com.example.tmizzle2005.myriadChallenge.Model.Quest;
+import com.example.tmizzle2005.myriadChallenge.R;
+import com.example.tmizzle2005.myriadChallenge.activity.KingdomInfo;
+import com.example.tmizzle2005.myriadChallenge.activity.Nicer_Quest;
+import com.example.tmizzle2005.myriadChallenge.activity.SignUp;
 import com.squareup.picasso.Picasso;
 
 public class Info_Fragment extends Fragment {

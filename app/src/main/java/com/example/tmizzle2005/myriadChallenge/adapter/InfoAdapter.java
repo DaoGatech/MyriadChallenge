@@ -1,7 +1,6 @@
-package com.example.tmizzle2005.test.adapter;
+package com.example.tmizzle2005.myriadChallenge.adapter;
 
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 

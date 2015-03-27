@@ -1,4 +1,4 @@
-package com.example.tmizzle2005.test.activity;
+package com.example.tmizzle2005.myriadChallenge.activity;
 
 /**
  * Created by tmizzle2005 on 3/27/15.
@@ -8,8 +8,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.GridView;
-import com.example.tmizzle2005.test.R;
-import com.example.tmizzle2005.test.adapter.NicerQuestAdapter;
+import com.example.tmizzle2005.myriadChallenge.R;
+import com.example.tmizzle2005.myriadChallenge.adapter.NicerQuestAdapter;
 
 /**
  * This class displays the list of quests of each kingdom in an easier way for the user

@@ -1,4 +1,4 @@
-package com.example.tmizzle2005.test.activity;
+package com.example.tmizzle2005.myriadChallenge.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.support.v7.widget.Toolbar;
 import com.devspark.robototextview.widget.RobotoTextView;
-import com.example.tmizzle2005.test.R;
+import com.example.tmizzle2005.myriadChallenge.R;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;

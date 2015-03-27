@@ -1,4 +1,4 @@
-package com.example.tmizzle2005.test;
+package com.example.tmizzle2005.myriadChallenge;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

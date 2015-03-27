@@ -1,4 +1,4 @@
-package com.example.tmizzle2005.test.Model;
+package com.example.tmizzle2005.myriadChallenge.Model;
 
 /**
  * Created by tmizzle2005 on 3/15/15.

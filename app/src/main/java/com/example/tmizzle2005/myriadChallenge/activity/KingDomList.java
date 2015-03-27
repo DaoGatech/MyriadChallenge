@@ -1,4 +1,4 @@
-package com.example.tmizzle2005.test.activity;
+package com.example.tmizzle2005.myriadChallenge.activity;
 
 import java.util.ArrayList;
 import android.app.ProgressDialog;
@@ -13,11 +13,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
-import com.example.tmizzle2005.test.Inteface.API;
-import com.example.tmizzle2005.test.Model.KdInfo;
-import com.example.tmizzle2005.test.Model.KingdomItem;
-import com.example.tmizzle2005.test.R;
-import com.example.tmizzle2005.test.adapter.KingdomAdapter;
+import com.example.tmizzle2005.myriadChallenge.Inteface.API;
+import com.example.tmizzle2005.myriadChallenge.Model.KdInfo;
+import com.example.tmizzle2005.myriadChallenge.Model.KingdomItem;
+import com.example.tmizzle2005.myriadChallenge.R;
+import com.example.tmizzle2005.myriadChallenge.adapter.KingdomAdapter;
 import retrofit.Callback;
 import retrofit.RestAdapter;
 import retrofit.RetrofitError;

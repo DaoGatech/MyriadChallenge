@@ -1,4 +1,4 @@
-package com.example.tmizzle2005.test.Model;
+package com.example.tmizzle2005.myriadChallenge.Model;
 
 import java.util.ArrayList;
 

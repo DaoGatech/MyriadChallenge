@@ -1,4 +1,4 @@
-package com.example.tmizzle2005.test.adapter;
+package com.example.tmizzle2005.myriadChallenge.adapter;
 
 /**
  * Created by tmizzle2005 on 3/27/15.
@@ -13,9 +13,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.devspark.robototextview.widget.RobotoTextView;
-import com.example.tmizzle2005.test.R;
-import com.example.tmizzle2005.test.activity.KingdomInfo;
-import com.example.tmizzle2005.test.activity.SignUp;
+import com.example.tmizzle2005.myriadChallenge.R;
+import com.example.tmizzle2005.myriadChallenge.activity.KingdomInfo;
+import com.example.tmizzle2005.myriadChallenge.activity.SignUp;
 
 import java.util.ArrayList;
 

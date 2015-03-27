@@ -1,19 +1,18 @@
-package com.example.tmizzle2005.test.activity;
+package com.example.tmizzle2005.myriadChallenge.activity;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.widget.Toast;
 
-import com.example.tmizzle2005.test.Fragment.Info_Fragment;
-import com.example.tmizzle2005.test.Inteface.API;
-import com.example.tmizzle2005.test.Model.KdInfo;
-import com.example.tmizzle2005.test.R;
-import com.example.tmizzle2005.test.adapter.InfoAdapter;
+import com.example.tmizzle2005.myriadChallenge.Fragment.Info_Fragment;
+import com.example.tmizzle2005.myriadChallenge.Inteface.API;
+import com.example.tmizzle2005.myriadChallenge.Model.KdInfo;
+import com.example.tmizzle2005.myriadChallenge.R;
+import com.example.tmizzle2005.myriadChallenge.adapter.InfoAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;

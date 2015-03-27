@@ -1,4 +1,4 @@
-package com.example.tmizzle2005.test.activity;
+package com.example.tmizzle2005.myriadChallenge.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,9 +11,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.example.tmizzle2005.test.Inteface.API;
-import com.example.tmizzle2005.test.Model.SignUpMessage;
-import com.example.tmizzle2005.test.R;
+import com.example.tmizzle2005.myriadChallenge.Inteface.API;
+import com.example.tmizzle2005.myriadChallenge.Model.SignUpMessage;
+import com.example.tmizzle2005.myriadChallenge.R;
 import retrofit.Callback;
 import retrofit.RestAdapter;
 import retrofit.RetrofitError;

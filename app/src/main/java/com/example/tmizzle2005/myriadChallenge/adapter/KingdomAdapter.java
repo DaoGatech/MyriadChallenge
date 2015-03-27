@@ -1,4 +1,4 @@
-package com.example.tmizzle2005.test.adapter;
+package com.example.tmizzle2005.myriadChallenge.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.devspark.robototextview.widget.RobotoTextView;
-import com.example.tmizzle2005.test.Model.KingdomItem;
-import com.example.tmizzle2005.test.R;
-import com.example.tmizzle2005.test.activity.KingdomInfo;
-import com.example.tmizzle2005.test.activity.SignUp;
+import com.example.tmizzle2005.myriadChallenge.Model.KingdomItem;
+import com.example.tmizzle2005.myriadChallenge.R;
+import com.example.tmizzle2005.myriadChallenge.activity.KingdomInfo;
+import com.example.tmizzle2005.myriadChallenge.activity.SignUp;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
