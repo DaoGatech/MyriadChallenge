@@ -24,7 +24,8 @@
             android:name=".activity.KingdomInfo"></activity>
 
         <activity
-            android:name=".activity.Progress"></activity>
+            android:name=".activity.Progress"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.Nicer_Quest"></activity>
     </application>

@@ -9,6 +9,7 @@ import java.util.List;
 
 /**
  * Created by tmizzle2005 on 3/19/15.
+ * This is the adapter for the fragment of kingdom and quest information
  */
 public class InfoAdapter extends FragmentPagerAdapter{
     private List<Fragment> fragments;
@@ -21,15 +22,10 @@ public class InfoAdapter extends FragmentPagerAdapter{
         return this.fragments.get(position);
     }
 
-
     @Override
-
     public int getCount() {
-
         return this.fragments.size();
-
     }
-
 }
 
 

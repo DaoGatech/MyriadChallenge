@@ -18,6 +18,9 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+/**
+ * This is the adapter for the list of kingdoms in RecyclerView
+ */
 public class KingdomAdapter extends RecyclerView.Adapter<KingdomAdapter.ViewHolder> {
     private static ArrayList<KingdomItem> itemsData = new ArrayList<KingdomItem>();
     private Context context;
@@ -46,12 +49,18 @@ public class KingdomAdapter extends RecyclerView.Adapter<KingdomAdapter.ViewHold
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
-        int remain = prefs.getInt(itemsData.get(position).getName()  +  prefs.getString("storedEmail","") + new SignUp().getDifferKey(),0);
-        int qsize = prefs.getInt(itemsData.get(position).getName() + "size" +  prefs.getString("storedEmail","") + new SignUp().getDifferKey(),0);
+        //get the remaining quests
+        int remain = prefs.getInt(itemsData.get(position).getName()
+                +  prefs.getString("storedEmail","") + new SignUp().getDifferKey(),0);
+        //get the size of quests
+        int qsize = prefs.getInt(itemsData.get(position).getName()
+                + "size" +  prefs.getString("storedEmail","") + new SignUp().getDifferKey(),0);
         viewHolder.txtViewTitle.setText(itemsData.get(position).getName());
+        //load the picture of each kingom py Picasso library
         Picasso.with(context)
                 .load(itemsData.get(position).getImage())
                 .into(viewHolder.imgViewIcon);
+        //show the complete and incomplete number of quests
         viewHolder.questComplete.setText("Completed: " + (qsize-remain) + "/" + qsize);
 
     }
