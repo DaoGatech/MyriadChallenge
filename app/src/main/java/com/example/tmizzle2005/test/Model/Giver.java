@@ -1,4 +1,4 @@
-package com.example.tmizzle2005.test.POJO;
+package com.example.tmizzle2005.test.Model;
 
 /**
  * Created by tmizzle2005 on 3/19/15.

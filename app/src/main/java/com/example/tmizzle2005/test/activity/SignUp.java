@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.example.tmizzle2005.test.Inteface.API;
-import com.example.tmizzle2005.test.POJO.SignUpMessage;
+import com.example.tmizzle2005.test.Model.SignUpMessage;
 import com.example.tmizzle2005.test.R;
 import retrofit.Callback;
 import retrofit.RestAdapter;

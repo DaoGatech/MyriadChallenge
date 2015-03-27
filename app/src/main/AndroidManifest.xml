@@ -25,6 +25,8 @@
 
         <activity
             android:name=".activity.Progress"></activity>
+        <activity
+            android:name=".activity.Nicer_Quest"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.tmizzle2005.test.POJO;
+package com.example.tmizzle2005.test.Model;
 
 import java.util.ArrayList;
 

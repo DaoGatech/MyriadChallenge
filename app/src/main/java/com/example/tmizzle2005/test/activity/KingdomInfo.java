@@ -10,11 +10,12 @@ import android.widget.Toast;
 
 import com.example.tmizzle2005.test.Fragment.Info_Fragment;
 import com.example.tmizzle2005.test.Inteface.API;
-import com.example.tmizzle2005.test.POJO.KdInfo;
+import com.example.tmizzle2005.test.Model.KdInfo;
 import com.example.tmizzle2005.test.R;
 import com.example.tmizzle2005.test.adapter.InfoAdapter;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import retrofit.Callback;
@@ -29,6 +30,7 @@ import retrofit.client.Response;
 public class KingdomInfo extends FragmentActivity {
     InfoAdapter pageAdapter; //declare the adapter of the fragment
     public static ViewPager pager; //declare the view pager
+    public static HashMap<String,ArrayList<String>> map = new HashMap<String,ArrayList<String>>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,7 @@ public class KingdomInfo extends FragmentActivity {
             @Override
             public void success(KdInfo result, Response response) {
                 List<Fragment> fragmentLists = new ArrayList<Fragment>();
+                ArrayList<String> names = new ArrayList<String>();
                 //add the kingdom page to the fragments list
                 fragmentLists.add(Info_Fragment.addKingDomInfo(result));
                 for(int i = 0; i < result.getKingDomQuests().size(); i++) {
@@ -66,10 +69,13 @@ public class KingdomInfo extends FragmentActivity {
                         SharedPreferences.Editor editor = getSharedPreferences("savedData", Context.MODE_PRIVATE).edit();
                         editor.putString(result.getKingDomQuests().get(i).
                                 getQuestName() + prefs.getString("storedEmail","") + new SignUp().getDifferKey(), "incomplete").apply();
+
                     }
+                    names.add(result.getKingDomQuests().get(i).getQuestName());
                     //add the "quest" page to the fragment list
                     fragmentLists.add(Info_Fragment.addQuestInfo(result.getKingDomName(), result.getKingDomQuests().get(i)));
                 }
+                map.put(result.getKingDomName(),names);
                 //initialize the adapter of viewpager
                 pageAdapter = new InfoAdapter(getSupportFragmentManager(), fragmentLists);
                 pager = (ViewPager)findViewById(R.id.viewpager);

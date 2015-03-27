@@ -14,8 +14,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 import com.example.tmizzle2005.test.Inteface.API;
-import com.example.tmizzle2005.test.POJO.KdInfo;
-import com.example.tmizzle2005.test.POJO.KingdomItem;
+import com.example.tmizzle2005.test.Model.KdInfo;
+import com.example.tmizzle2005.test.Model.KingdomItem;
 import com.example.tmizzle2005.test.R;
 import com.example.tmizzle2005.test.adapter.KingdomAdapter;
 import retrofit.Callback;
@@ -117,7 +117,7 @@ public class KingDomList extends ActionBarActivity {
             //go back to the SignUp activity
             Intent back = new Intent(KingDomList.this,SignUp.class);
             startActivity(back);
-        //if the user clicks the progress button in the menu, go to Progress Activity
+            //if the user clicks the progress button in the menu, go to Progress Activity
         } else if(id == R.id.progress) {
             Intent progress = new Intent(KingDomList.this,Progress.class);
             startActivity(progress);
@@ -137,7 +137,7 @@ public class KingDomList extends ActionBarActivity {
      * this function calls the API by retrofit and gets the list of kingdoms
      */
     private void loadKingDom() {
-    //specify endpoint and build the restadapter instance
+        //specify endpoint and build the restadapter instance
         RestAdapter restAdapter = new RestAdapter.Builder()
                 .setEndpoint("https://challenge2015.myriadapps.com")
                 .build();
@@ -148,42 +148,42 @@ public class KingDomList extends ActionBarActivity {
             public void success(ArrayList<KingdomItem> li, Response response) {
                 // traverse the list of each Kingdoms
                 for(int i = 0; i < li.size();i++) {
-                        // get the name of the kingdom
-                        final String name = li.get(i).getName();
-                        //call the getKdInfo from the interface to get the number of quests of each
-                        // kingdom
-                        api.getKdInfo(li.get(i).getId(), new Callback<KdInfo>() {
-                            @Override
-                            public void success(KdInfo result, Response response) {
-                                // return the size of quests for each kingdom.
-                                int size = result.getKingDomQuests().size();
-                                // save the number of quests remaining of each kingdom
-                                if(!prefs.contains(name +  prefs.getString("storedEmail","")
-                                        + new SignUp().getDifferKey())) {
-                                    SharedPreferences.Editor editor = getSharedPreferences("savedData",
-                                            Context.MODE_PRIVATE).edit();
-                                    editor.putInt(name + prefs.getString("storedEmail","")
-                                            + new SignUp().getDifferKey(),size).apply();
-                                }
-                                // save the number of quests of each kingdom
-                                if(!prefs.contains(name + "size" + prefs.getString("storedEmail","")
-                                        + new SignUp().getDifferKey())) {
-                                    SharedPreferences.Editor editor = getSharedPreferences("savedData",
-                                            Context.MODE_PRIVATE).edit();
-                                    editor.putInt(name + "size" +  prefs.getString("storedEmail","")
-                                            + new SignUp().getDifferKey(),size).apply();
-                                }
+                    // get the name of the kingdom
+                    final String name = li.get(i).getName();
+                    //call the getKdInfo from the interface to get the number of quests of each
+                    // kingdom
+                    api.getKdInfo(li.get(i).getId(), new Callback<KdInfo>() {
+                        @Override
+                        public void success(KdInfo result, Response response) {
+                            // return the size of quests for each kingdom.
+                            int size = result.getKingDomQuests().size();
+                            // save the number of quests remaining of each kingdom
+                            if(!prefs.contains(name +  prefs.getString("storedEmail","")
+                                    + new SignUp().getDifferKey())) {
+                                SharedPreferences.Editor editor = getSharedPreferences("savedData",
+                                        Context.MODE_PRIVATE).edit();
+                                editor.putInt(name + prefs.getString("storedEmail","")
+                                        + new SignUp().getDifferKey(),size).apply();
+                            }
+                            // save the number of quests of each kingdom
+                            if(!prefs.contains(name + "size" + prefs.getString("storedEmail","")
+                                    + new SignUp().getDifferKey())) {
+                                SharedPreferences.Editor editor = getSharedPreferences("savedData",
+                                        Context.MODE_PRIVATE).edit();
+                                editor.putInt(name + "size" +  prefs.getString("storedEmail","")
+                                        + new SignUp().getDifferKey(),size).apply();
+                            }
 
-                            }
-                            @Override
-                            public void failure(RetrofitError error) {
-                                //if connecting fails, simply close the activity
-                                Toast.makeText(getApplicationContext(),
-                                        "Opps. Error Connecting to the Server",
-                                        Toast.LENGTH_LONG).show();
-                                finish();
-                            }
-                        });
+                        }
+                        @Override
+                        public void failure(RetrofitError error) {
+                            //if connecting fails, simply close the activity
+                            Toast.makeText(getApplicationContext(),
+                                    "Opps. Error Connecting to the Server",
+                                    Toast.LENGTH_LONG).show();
+                            finish();
+                        }
+                    });
 
 
                 }

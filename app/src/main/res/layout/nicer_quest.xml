@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/grid_tool_bar"
+        layout="@layout/tool_bar"
+        ></include>
+
+    <GridView
+        android:layout_marginTop="60dp"
+        android:id="@+id/nicerQuest"
+        android:background="#fff"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:numColumns="auto_fit"
+        android:columnWidth="120dp"
+        android:horizontalSpacing="15dp"
+        android:verticalSpacing="15dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:stretchMode="columnWidth" >
+
+    </GridView>
+</RelativeLayout>

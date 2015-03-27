@@ -4,9 +4,9 @@ package com.example.tmizzle2005.test.Inteface;
  * Created by tmizzle2005 on 3/15/15.
  */
 
-import com.example.tmizzle2005.test.POJO.KdInfo;
-import com.example.tmizzle2005.test.POJO.KingdomItem;
-import com.example.tmizzle2005.test.POJO.SignUpMessage;
+import com.example.tmizzle2005.test.Model.KdInfo;
+import com.example.tmizzle2005.test.Model.KingdomItem;
+import com.example.tmizzle2005.test.Model.SignUpMessage;
 
 import java.util.ArrayList;
 import retrofit.Callback;

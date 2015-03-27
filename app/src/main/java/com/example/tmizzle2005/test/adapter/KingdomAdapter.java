@@ -1,23 +1,17 @@
 package com.example.tmizzle2005.test.adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.devspark.robototextview.widget.RobotoTextView;
-import com.example.tmizzle2005.test.POJO.KingdomItem;
+import com.example.tmizzle2005.test.Model.KingdomItem;
 import com.example.tmizzle2005.test.R;
-import com.example.tmizzle2005.test.activity.KingDomList;
 import com.example.tmizzle2005.test.activity.KingdomInfo;
 import com.example.tmizzle2005.test.activity.SignUp;
 import com.squareup.picasso.Picasso;

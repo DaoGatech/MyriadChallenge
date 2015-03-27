@@ -14,6 +14,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -25,10 +26,11 @@ import android.widget.ToggleButton;
 import com.devspark.robototextview.util.RobotoTextViewUtils;
 import com.devspark.robototextview.util.RobotoTypefaceManager;
 import com.devspark.robototextview.widget.RobotoTextView;
-import com.example.tmizzle2005.test.POJO.KdInfo;
-import com.example.tmizzle2005.test.POJO.Quest;
+import com.example.tmizzle2005.test.Model.KdInfo;
+import com.example.tmizzle2005.test.Model.Quest;
 import com.example.tmizzle2005.test.R;
 import com.example.tmizzle2005.test.activity.KingdomInfo;
+import com.example.tmizzle2005.test.activity.Nicer_Quest;
 import com.example.tmizzle2005.test.activity.SignUp;
 import com.squareup.picasso.Picasso;
 
@@ -77,6 +79,23 @@ public class Info_Fragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     getActivity().finish();
+                }
+            });
+            toolbar.inflateMenu(R.menu.menu2);
+            toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem menuItem) {
+
+                    switch (menuItem.getItemId()){
+                        case R.id.quests:
+                            Intent nicerQuest = new Intent(getActivity(), Nicer_Quest.class);
+                            nicerQuest.putExtra("name",getArguments().getString("name"));
+                            nicerQuest.putExtra("size",getArguments().getString("questnum"));
+                            startActivity(nicerQuest);
+                            return true;
+                    }
+
+                    return false;
                 }
             });
             ImageView image = (ImageView) v.findViewById(R.id.kingdom_avatar);
